@@ -1,14 +1,13 @@
-Iron Lambda
-===========
+## Iron Lambda ##
 
 Iron Lambda is a collection of Coq formalizations for functional languages of increasing complexity. All proofs use straight deBruijn indices for binders.
 
-* The home page is on a [separate site](http://iron.ouroborus.net). 
+* The home page is on a [separate site](http://iron.ouroborus.net).
 * The absence of bugs has been mechanically verified, hence there is no bug tracker.
 * Comments on style, or requests for more information should go to  iron [at] ouroborus.net.
 
+---
 
--------------------------------------------------------------------------------
 Proofs that are "done" have at least Progress and Preservation theorems.
 
   * Simple
@@ -17,12 +16,12 @@ Proofs that are "done" have at least Progress and Preservation theorems.
     "Simple" here refers to the lack of polymorphism.
 
   * SimplePCF
- 
+
     STLC with booleans, naturals and fixpoint.
 
   * SimpleRef
- 
-    STLC with mutable references. 
+
+    STLC with mutable references.
     The typing judgement includes a store typing.
 
   * SimpleData
@@ -31,7 +30,7 @@ Proofs that are "done" have at least Progress and Preservation theorems.
     The definition of expressions uses indirect mutual recursion. Expressions
     contain a list of case-alternatives, and alternatives contain expressions,
     but the definition of the list type is not part of the same recursive group.
-    The proof requires that we define our own induction scheme for expressions. 
+    The proof requires that we define our own induction scheme for expressions.
 
   * SystemF
 
@@ -47,12 +46,12 @@ Proofs that are "done" have at least Progress and Preservation theorems.
     SystemF2 with algebraic data and case expressions.
     Requires that we define simultaneous substitutions, which are used when
     subsituting expressions bound by pattern variables into the body of
-    an alternative. The language allows data constructors to be applied to 
+    an alternative. The language allows data constructors to be applied to
     general expressions rather than just values, which requires more work
     when defining evaluation contexts.
 
   * SystemF2Store
-    
+
     SystemF2 with algebraic data, case expressions and a mutable store.
     All data is allocated into the store and can be updated with primitive
     polymorphic update operators.
@@ -61,4 +60,4 @@ Proofs that are "done" have at least Progress and Preservation theorems.
 
     SystemF2 with a region and effect system. Mutable references are allocated
     in regions in the store, and their lifetime follows the lexical structure
-    of the code. 
+    of the code.
